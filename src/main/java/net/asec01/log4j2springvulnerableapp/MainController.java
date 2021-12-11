@@ -4,6 +4,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.springframework.web.servlet.view.RedirectView;
 
 @Controller
 public class MainController {
@@ -34,5 +35,11 @@ public class MainController {
     public static Response requestHeaderUA(@RequestHeader("User-Agent") String useragent){
         log.info("vulnerable_request_header_ua User-Agent: {}", useragent);
         return new Response("vulnerable_request_header_ua", useragent);
+    }
+
+    @RequestMapping("/")
+    @ResponseBody
+    public RedirectView redirectToTestPage() {
+        return new RedirectView("/test.html");
     }
 }

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Log4Shell Test</title>
+</head>
+<body>
+<h1>Log4Shell Test</h1>
+<p><a href="https://github.com/zzzz0317/log4j2-vulnerable-spring-app">https://github.com/zzzz0317/log4j2-vulnerable-spring-app</a>
+</p>
+<br>
+<h3>GET</h3>
+<form action="/vulnerable_request_get" method="get">
+    <label for="vulnerable_request_get_input">v=</label>
+    <input type="text" id="vulnerable_request_get_input" name="v">
+    <input type="submit" value="Submit">
+</form>
+<br>
+<h3>POST</h3>
+<form action="/vulnerable_request_post" method="post">
+    <label for="vulnerable_request_post_input">v=</label>
+    <input type="text" id="vulnerable_request_post_input" name="v">
+    <input type="submit" value="Submit">
+</form>
+<br>
+</body>
+</html>
